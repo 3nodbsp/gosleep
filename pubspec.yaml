@@ -1,0 +1,32 @@
+name: gosleep
+description: "基于专利 CN112972862A《催眠音乐控制方法、装置、计算机设备和存储介质》的睡眠辅助 APP：
+  麦克风采集呼吸频率，动态调制催眠音乐输出频率，诱导呼吸降频直至进入深度睡眠。"
+publish_to: "none"
+version: 0.1.0
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # 麦克风 PCM 采集（Android/iOS）
+  record: ^5.1.2
+
+  # 实时 PCM 音频流播放（音景程序化合成输出）
+  flutter_pcm_sound: ^1.2.0
+
+  # 设置与会话历史持久化
+  shared_preferences: ^2.2.3
+
+  # 会话期间保持屏幕常亮（v1 后台麦克风受系统限制，见 README）
+  wakelock_plus: ^1.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
